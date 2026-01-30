@@ -40,6 +40,30 @@ external-ui: ui
 external-ui-name: zashboard
 external-ui-url: "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip"
 
+# host, console游戏下载
+host:
+  assets1.xboxlive.cn: 114.80.149.75
+  assets2.xboxlive.cn: 114.80.149.75
+  d1.xboxlive.cn: 114.80.149.75
+  d2.xboxlive.cn: 114.80.149.75
+  dlassets.xboxlive.cn: 61.170.57.41
+  dlassets2.xboxlive.cn: 61.170.57.41
+  dl.delivery.mp.microsoft.com: 101.227.95.84
+  tlu.dl.delivery.mp.microsoft.com: 101.227.95.84
+  1d.tlu.dl.delivery.mp.microsoft.com: 101.227.95.84
+  assets1.xboxlive.com: 10.0.0.2
+  assets2.xboxlive.com: 10.0.0.2
+  d1.xboxlive.com: 10.0.0.2
+  d2.xboxlive.com: 10.0.0.2
+  dlassets.xboxlive.com: 10.0.0.2
+  dlassets2.xboxlive.com: 10.0.0.2
+  xvcf1.xboxlive.com: 10.0.0.2
+  xvcf2.xboxlive.com: 10.0.0.2
+  gst.prod.dl.playstation.net: 114.80.26.84
+  gs2.ww.prod.dl.playstation.net: 114.80.26.84
+  zeus.dl.playstation.net: 114.80.26.84
+  ares.dl.playstation.net: 114.80.26.84
+
 # 嗅探（fakeip下其实可以不用嗅探）
 sniffer:
   enable: true
@@ -124,6 +148,27 @@ proxy-groups:
 
 # 规则匹配
 rules:
+  - DOMAIN-SUFFIX,assets1.xboxlive.cn,DIRECT
+  - DOMAIN-SUFFIX,assets2.xboxlive.cn,DIRECT
+  - DOMAIN-SUFFIX,d1.xboxlive.cn,DIRECT
+  - DOMAIN-SUFFIX,d2.xboxlive.cn,DIRECT
+  - DOMAIN-SUFFIX,dlassets.xboxlive.cn,DIRECT
+  - DOMAIN-SUFFIX,dlassets2.xboxlive.cn,DIRECT
+  - DOMAIN-SUFFIX,dl.delivery.mp.microsoft.com,DIRECT
+  - DOMAIN-SUFFIX,tlu.dl.delivery.mp.microsoft.com,DIRECT
+  - DOMAIN-SUFFIX,1d.tlu.dl.delivery.mp.microsoft.com,DIRECT
+  - DOMAIN-SUFFIX,assets1.xboxlive.com,DIRECT
+  - DOMAIN-SUFFIX,assets2.xboxlive.com,DIRECT
+  - DOMAIN-SUFFIX,d1.xboxlive.com,DIRECT
+  - DOMAIN-SUFFIX,d2.xboxlive.com,DIRECT
+  - DOMAIN-SUFFIX,dlassets.xboxlive.com,DIRECT
+  - DOMAIN-SUFFIX,dlassets2.xboxlive.com,DIRECT
+  - DOMAIN-SUFFIX,xvcf1.xboxlive.com,DIRECT
+  - DOMAIN-SUFFIX,xvcf2.xboxlive.com,DIRECT
+  - DOMAIN-SUFFIX,gst.prod.dl.playstation.net,DIRECT
+  - DOMAIN-SUFFIX,gs2.ww.prod.dl.playstation.net,DIRECT
+  - DOMAIN-SUFFIX,zeus.dl.playstation.net,DIRECT
+  - DOMAIN-SUFFIX,ares.dl.playstation.net,DIRECT
   - RULE-SET,private_ip,直连,no-resolve
   - RULE-SET,private_domain,直连
   - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
